@@ -123,6 +123,7 @@ namespace boost
         : public BOOST_TMP_MACRO(Function&, Function, Function)
     {
         Function& ref_function;
+        lightweight_forward_adapter& operator=(const lightweight_forward_adapter&);
       public:
         lightweight_forward_adapter(Function& f)
           : ref_function(f) 

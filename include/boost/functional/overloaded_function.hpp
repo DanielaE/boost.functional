@@ -141,6 +141,7 @@ class overloaded_function
     : BOOST_PP_ENUM(BOOST_FUNCTIONAL_overloads,
             BOOST_FUNCTIONAL_inherit, ~)
 {
+    overloaded_function& operator=(const overloaded_function&);
 public:
     template<
         BOOST_PP_ENUM(BOOST_FUNCTIONAL_overloads, BOOST_FUNCTIONAL_g_tparam, ~)
