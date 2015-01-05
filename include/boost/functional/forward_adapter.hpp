@@ -118,6 +118,7 @@ namespace boost
         : public BOOST_TMP_MACRO(Function&, Function, Function)
     {
         Function& ref_function;
+        forward_adapter& operator=(const forward_adapter&);
       public:
         forward_adapter(Function& f)
           : ref_function(f) 

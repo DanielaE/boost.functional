@@ -78,6 +78,8 @@ public:
     }
 
 private:
+    base& operator=(const base&);
+
     boost::function< BOOST_FUNCTIONAL_DETAIL_f > const f_;
 };
 

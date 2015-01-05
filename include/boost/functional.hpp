@@ -16,6 +16,11 @@
 #include <boost/call_traits.hpp>
 #include <functional>
 
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable:4512) // assignment operator could not be generated
+#endif
+
 namespace boost
 {
 #ifndef BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
@@ -544,5 +549,9 @@ namespace boost
         return pointer_to_binary_function<Arg1,Arg2,Result>(f);
     }
 } // namespace boost
+
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
 
 #endif
