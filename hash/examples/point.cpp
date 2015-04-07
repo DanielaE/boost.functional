@@ -53,6 +53,7 @@ int main()
     // hash function.
     assert(point_hasher(p1) != point_hasher(p2));
     assert(point_hasher(p1) != point_hasher(p3));
+    (void)point_hasher;
 
     return 0;
 }
