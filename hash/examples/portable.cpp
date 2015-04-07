@@ -49,6 +49,7 @@ int main()
     assert(hasher(x) == hasher(x));
     assert(hasher(x) != hasher(y));
     assert(hasher(x) == hasher(z));
+    (void)hasher;
 
     return 0;
 }

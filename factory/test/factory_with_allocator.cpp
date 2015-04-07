@@ -35,7 +35,7 @@ class counting_allocator : public std::allocator<T>
     struct rebind { typedef counting_allocator<OtherT> other; };
 
     template< typename OtherT >
-    counting_allocator(counting_allocator<OtherT> const& that)
+    counting_allocator(counting_allocator<OtherT> const&)
     { }
 
     static size_t n_allocated;
