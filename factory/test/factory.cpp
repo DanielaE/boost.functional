@@ -27,10 +27,6 @@ int main()
       sum* instance( boost::factory< sum* >()(one,two) );
       BOOST_TEST(*instance == 3);
     }
-    {
-      std::auto_ptr<sum> instance( boost::factory< std::auto_ptr<sum> >()(one,two) );
-      BOOST_TEST(*instance == 3);
-    }
     return boost::report_errors();
 }
 
