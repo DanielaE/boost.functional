@@ -419,7 +419,6 @@ namespace boost
 
 #define BOOST_HASH_SPECIALIZE(type) \
     template <> struct hash<type> \
-         : public std::unary_function<type, std::size_t> \
     { \
         std::size_t operator()(type v) const \
         { \
@@ -429,7 +428,6 @@ namespace boost
 
 #define BOOST_HASH_SPECIALIZE_REF(type) \
     template <> struct hash<type> \
-         : public std::unary_function<type, std::size_t> \
     { \
         std::size_t operator()(type const& v) const \
         { \
@@ -483,7 +481,6 @@ namespace boost
 
     template <class T>
     struct hash<T*>
-        : public std::unary_function<T*, std::size_t>
     {
         std::size_t operator()(T* v) const
         {
@@ -516,7 +513,6 @@ namespace boost
         {
             template <class T>
             struct inner
-                : public std::unary_function<T, std::size_t>
             {
                 std::size_t operator()(T val) const
                 {
